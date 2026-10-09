@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AWS Cloud Project</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --accent-color: #ff9900;
+            --accent-hover: #e68a00;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            text-align: center;
+            border: 1px solid #334155;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: #10b981;
+            color: #000;
+            font-weight: bold;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .interactive-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: #0f172a;
+            border-radius: 12px;
+            border: 1px dashed #475569;
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        #clock {
+            font-family: monospace;
+            font-size: 1.2rem;
+            color: #38bdf8;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚀 AWS Cloud Server</h1>
+        <p>Hosted on <strong>Amazon EC2 (Amazon Linux 2023)</strong> with automated backups synced securely to <strong>Amazon S3</strong>.</p>
+
+        <span class="status-badge">⚡ Apache Web Server Online</span>
+
+        <div class="interactive-box">
+            <h3>Server Time Clock</h3>
+            <div id="clock">Loading system time...</div>
+            <button onclick="triggerBackup()">Simulate Manual S3 Backup</button>
+            <p id="backup-status" style="margin-top: 15px; font-size: 0.95rem;"></p>
+        </div>
+    </div>
+
+    <script>
+        // Real-time clock script
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').innerText = now.toUTCString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Interactive button simulation
+        function triggerBackup() {
+            const status = document.getElementById('backup-status');
+            status.style.color = '#38bdf8';
+            status.innerText = '⏳ Archiving /var/www/html and transferring to S3...';
+            
+            setTimeout(() => {
+                status.style.color = '#10b981';
+                status.innerText = '✅ Backup complete! Archive saved to S3 bucket.';
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>
