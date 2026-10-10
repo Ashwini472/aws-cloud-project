@@ -58,7 +58,7 @@ The infrastructure uses **AWS IAM Roles** for secure inter-service authenticatio
 ## 📷 Screenshots & Proof of Work
 
 ### 1. Live Web Server
-![Live Web Server](./images/live-website.png)
+![Live Web Server](./live-website.png)
 
 ### 2. S3 Backup Storage Verification
 ![S3 Backups](./images/s3-backups.png)
