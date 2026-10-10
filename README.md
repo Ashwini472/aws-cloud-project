@@ -64,7 +64,7 @@ The infrastructure uses **AWS IAM Roles** for secure inter-service authenticatio
 ![S3 Backups](s3-backups.png)
 
 ### 3. CloudWatch Monitoring
-![CloudWatch Metrics](cloudwatch-metrics.png)
+![CloudWatch Metrics](cloud-watch-metrics.png)
 
-### 4. Terminal backup
-(terminal-backup.png)
+### 4. Terminal Backup
+![Terminal Backup](terminal-backup.png)
