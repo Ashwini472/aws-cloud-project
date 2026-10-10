@@ -61,7 +61,7 @@ The infrastructure uses **AWS IAM Roles** for secure inter-service authenticatio
 ![Live Web Server](./live-website.png)
 
 ### 2. S3 Backup Storage Verification
-![S3 Backups](./images/s3-backups.png)
+![S3 Backups](./s3-backups.png)
 
 ### 3. CloudWatch Monitoring
-![CloudWatch Metrics](./images/cloudwatch-metrics.png)
+![CloudWatch Metrics](./cloudwatch-metrics.png)
